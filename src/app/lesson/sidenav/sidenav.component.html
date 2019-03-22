@@ -1,3 +1,28 @@
-<p>
-  sidenav works!
-</p>
+<mat-toolbar>我是Toolbar</mat-toolbar>
+<mat-sidenav-container>
+
+  <mat-sidenav fixedInViewport="true" fixedTopGap="20" fixedBottomGap="20"
+               #sideNavLeft opened="true" position="start">
+    <div>我是左邊選單</div>
+  </mat-sidenav>
+
+  <mat-sidenav #sideNavRight opened="true" position="end">
+    <div>我是右邊選單</div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-button (click)="sideNavLeft.toggle()">切換左邊選單狀態</button>
+    <button mat-button (click)="sideNavRight.toggle()">切換右邊選單狀態</button>
+
+    <mat-drawer-container style="height:100px;border: 1px solid black">
+      <mat-drawer #drawer mode="side" opened="true">Drawer Side</mat-drawer>
+      <mat-drawer-content>
+        <button mat-raised-button (click)="drawer.toggle()">切換drawer狀態</button>
+        <br>
+        Content
+      </mat-drawer-content>
+    </mat-drawer-container>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
