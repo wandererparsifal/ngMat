@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="demo-app-header">
+  <button mat-icon-button (click)="sideNavLeft.toggle()">
+    <mat-icon>{{ sideNavLeft.opened ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <span>IT鐵人賽－Angular Material Demo</span>
+</mat-toolbar>
+<mat-sidenav-container class="demo-app-container">
+
+  <mat-sidenav #sideNavLeft opened="true" position="start" class="demo-app-sidenav">
+    <div>我是左邊選單1212121212</div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <li *ngFor="let i of items">{{i}}</li>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,15 @@
+.demo-app-header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.demo-app-container {
+  background: aqua;
+  padding-top: 64px;
+}
+
+.demo-app-sidenav{
+  background: lightcoral;
+  padding-top: 64px;
+}
