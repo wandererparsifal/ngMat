@@ -2,11 +2,11 @@
 <mat-sidenav-container>
 
   <mat-sidenav fixedInViewport="true" fixedTopGap="20" fixedBottomGap="20"
-               #sideNavLeft opened="true" position="start">
+               #sideNavLeft opened="false" position="start">
     <div>我是左邊選單</div>
   </mat-sidenav>
 
-  <mat-sidenav #sideNavRight opened="true" position="end">
+  <mat-sidenav #sideNavRight opened="false" position="end">
     <div>我是右邊選單</div>
   </mat-sidenav>
 
@@ -15,7 +15,7 @@
     <button mat-button (click)="sideNavRight.toggle()">切換右邊選單狀態</button>
 
     <mat-drawer-container style="height:100px;border: 1px solid black">
-      <mat-drawer #drawer mode="side" opened="true">Drawer Side</mat-drawer>
+      <mat-drawer #drawer mode="side" opened="false">Drawer Side</mat-drawer>
       <mat-drawer-content>
         <button mat-raised-button (click)="drawer.toggle()">切換drawer狀態</button>
         <br>
