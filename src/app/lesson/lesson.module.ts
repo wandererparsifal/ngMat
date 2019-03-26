@@ -7,9 +7,10 @@ import { MaterialModule } from '../material/material.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListComponent } from './list/list.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
-  declarations: [SidenavComponent, ToolbarComponent, ListComponent],
+  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent],
   imports: [
     CommonModule,
     MaterialModule,
