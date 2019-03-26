@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LessonModule } from './lesson/lesson.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,8 @@ import { FormComponent } from './form/form.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     LessonModule,
     AppRoutingModule,
     BrowserAnimationsModule
