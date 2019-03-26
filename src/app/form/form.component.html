@@ -22,7 +22,8 @@
       <input type="text"
              id="skuInput2"
              placeholder="SKU"
-             [formControl]="myForm.controls['sku']">
+             [formControl]="myForm.get('sku')">
+             <!--[formControl]="myForm.controls['sku']">-->
     </div>
     <button type="submit">Submit</button>
   </form>
