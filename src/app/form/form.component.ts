@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -10,10 +10,23 @@ export class FormComponent implements OnInit {
 
   myForm: FormGroup;
 
+  inputSku: FormControl;
+
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      sku: ['ABC123']
+      sku: ['ABC123', Validators.required]
     });
+    this.inputSku = this.myForm.get('sku') as FormControl;
+    this.inputSku.valueChanges.subscribe(
+      (value: string) => {
+        console.log('sku changed to:', value);
+      }
+    );
+    this.myForm.valueChanges.subscribe(
+      (value: string) => {
+        console.log('form changed to:', value);
+      }
+    );
   }
 
   ngOnInit() {
