@@ -5,6 +5,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { StepperComponent } from './stepper/stepper.component';
+import { FormComponent } from '../form/form.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'toolbar', component: ToolbarComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'stepper', component: StepperComponent },
-  { path: '', redirectTo: '/stepper', pathMatch: 'full' }
+  { path: 'form', component: FormComponent },
+  { path: '', redirectTo: '/form', pathMatch: 'full' }
 ];
 
 @NgModule({
