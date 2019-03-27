@@ -14,6 +14,8 @@ export class StepperComponent implements OnInit {
 
   basicFormControl: FormControl;
 
+  surveyForm: FormGroup;
+
   constructor() {
     this.basicFormGroup = new FormGroup({
       name: new FormControl('', Validators.required)
@@ -24,6 +26,12 @@ export class StepperComponent implements OnInit {
         console.log('name changed to:', value);
       }
     );
+
+    this.surveyForm = new FormGroup({
+      basicQuestions: new FormGroup({
+        name2: new FormControl('', Validators.required)
+      })
+    });
   }
 
   ngOnInit() {
