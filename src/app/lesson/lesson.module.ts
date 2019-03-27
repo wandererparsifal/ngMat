@@ -9,11 +9,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListComponent } from './list/list.component';
 import { MenuComponent } from './menu/menu.component';
 import { StepperComponent } from './stepper/stepper.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     LessonRoutingModule
   ]

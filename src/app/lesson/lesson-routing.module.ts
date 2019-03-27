@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'stepper', component: StepperComponent },
   { path: 'form', component: FormComponent },
-  { path: '', redirectTo: '/form', pathMatch: 'full' }
+  { path: '', redirectTo: '/stepper', pathMatch: 'full' }
 ];
 
 @NgModule({
