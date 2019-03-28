@@ -6,6 +6,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { FormComponent } from '../form/form.component';
+import { InputComponent } from './input/input.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'stepper', component: StepperComponent },
   { path: 'form', component: FormComponent },
-  { path: '', redirectTo: '/stepper', pathMatch: 'full' }
+  { path: 'input', component: InputComponent },
+  { path: '', redirectTo: '/input', pathMatch: 'full' }
 ];
 
 @NgModule({

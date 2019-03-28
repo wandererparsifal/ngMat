@@ -10,9 +10,10 @@ import { ListComponent } from './list/list.component';
 import { MenuComponent } from './menu/menu.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
-  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent],
+  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent, InputComponent],
   imports: [
     CommonModule,
     FormsModule,
