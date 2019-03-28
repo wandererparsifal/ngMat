@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material';
+
+export class EarlyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && control.dirty);
+  }
+}
 
 @Component({
   selector: 'app-input',
@@ -7,7 +16,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  constructor() { }
+  surveyForm: FormGroup;
+
+  earlyErrorStateMatcher = new EarlyErrorStateMatcher();
+
+  constructor(fb: FormBuilder) {
+    this.surveyForm = fb.group({
+      intro: ['', [Validators.required, Validators.minLength(10)]]
+    });
+  }
 
   ngOnInit() {
   }
