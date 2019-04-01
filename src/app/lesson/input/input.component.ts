@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Valida
 import { ErrorStateMatcher } from '@angular/material';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { debounceTime, map } from 'rxjs/operators';
 
 export class EarlyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -41,7 +42,16 @@ export class InputComponent implements OnInit {
       country: ['', [Validators.required]]
     });
     this.countryControl = this.autoForm.get('country') as FormControl;
-    this.countries$ = this.httpClient.get<Country[]>('assets/countries.json');
+    // this.countries$ = this.httpClient.get<Country[]>('assets/countries.json');
+    this.countryControl.valueChanges
+      .pipe(debounceTime(300))
+      .subscribe(inputCountry => {
+        console.log(inputCountry);
+        this.countries$ = this.httpClient.get<any[]>('assets/countries.json')
+          .pipe(map(countries => {
+            return countries.filter(country => country.name.indexOf(inputCountry) >= 0);
+          }));
+      });
   }
 
   ngOnInit() {
