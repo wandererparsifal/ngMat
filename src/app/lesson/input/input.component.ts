@@ -57,4 +57,11 @@ export class InputComponent implements OnInit {
   ngOnInit() {
   }
 
+  displayCountry(country: any) {
+    if (country) {
+      return `${country.name} / ${country.code}`;
+    } else {
+      return '';
+    }
+  }
 }

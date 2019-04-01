@@ -32,8 +32,8 @@
     <input type="text" name="country" matInput placeholder="國家" formControlName="country"
            [matAutocomplete]="countries"/>
   </mat-form-field>
-  <mat-autocomplete #countries="matAutocomplete">
-    <mat-option *ngFor="let country of countries$ | async" [value]="country.name">
+  <mat-autocomplete #countries="matAutocomplete" [displayWith]="displayCountry">
+    <mat-option *ngFor="let country of countries$ | async" [value]="country">
       {{ country.name }}
     </mat-option>
   </mat-autocomplete>
