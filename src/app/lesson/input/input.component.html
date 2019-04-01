@@ -34,7 +34,7 @@
   </mat-form-field>
   <mat-autocomplete #countries="matAutocomplete" [displayWith]="displayCountry">
     <mat-option *ngFor="let country of countries$ | async" [value]="country">
-      {{ country.name }}
+      <span [innerHTML]="highlightFiltered(country.name)"></span>
     </mat-option>
   </mat-autocomplete>
 </form>

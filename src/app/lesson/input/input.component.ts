@@ -46,7 +46,7 @@ export class InputComponent implements OnInit {
     this.countryControl.valueChanges
       .pipe(debounceTime(300))
       .subscribe(inputCountry => {
-        console.log(inputCountry);
+        // console.log(inputCountry);
         this.countries$ = this.httpClient.get<any[]>('assets/countries.json')
           .pipe(map(countries => {
             return countries.filter(country => country.name.indexOf(inputCountry) >= 0);
@@ -64,4 +64,10 @@ export class InputComponent implements OnInit {
       return '';
     }
   }
+
+  highlightFiltered(countryName: string) {
+    const inputCountry = this.countryControl.value;
+    return countryName.replace(inputCountry, `<span class="autocomplete-highlight">${inputCountry}</span>`);
+  }
+
 }
