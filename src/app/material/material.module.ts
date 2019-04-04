@@ -8,8 +8,9 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatMenuModule,
-  MatStepperModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule
+  MatStepperModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatDatepickerModule
 } from '@angular/material';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [],
@@ -24,7 +25,9 @@ import {
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
   exports: [
     MatButtonModule,
@@ -36,7 +39,9 @@ import {
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ]
 })
 export class MaterialModule { }
