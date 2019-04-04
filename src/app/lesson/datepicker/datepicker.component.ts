@@ -9,6 +9,8 @@ import * as moment from 'moment';
 export class DatepickerComponent implements OnInit {
 
   startDate = moment(new Date(1999, 0, 1));
+  minDate = moment(new Date(1999, 0, 1));
+  maxDate = moment(new Date(1999, 0, 15));
 
   constructor() {
   }
@@ -16,4 +18,8 @@ export class DatepickerComponent implements OnInit {
   ngOnInit() {
   }
 
+  familyDayFilter(date: moment.Moment): boolean {
+    const day = date.day();
+    return day !== 2 && day !== 5;
+  }
 }
