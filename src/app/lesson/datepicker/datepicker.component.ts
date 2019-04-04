@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { MatDatepickerInputEvent } from '@angular/material';
 
 @Component({
   selector: 'app-datepicker',
@@ -22,4 +23,13 @@ export class DatepickerComponent implements OnInit {
     const day = date.day();
     return day !== 2 && day !== 5;
   }
+
+  logDateInput($event: MatDatepickerInputEvent<moment.Moment>) {
+    console.log($event.value);
+  }
+
+  logDateChange($event: MatDatepickerInputEvent<moment.Moment>) {
+    console.log($event.value);
+  }
+
 }

@@ -1,6 +1,7 @@
 <mat-form-field>
   <input type="text" name="birthday" matInput placeholder="生日" [min]="minDate" [max]="maxDate"
-         [matDatepickerFilter]="familyDayFilter" [matDatepicker]="birthdayPicker"/>
+         [matDatepickerFilter]="familyDayFilter" [matDatepicker]="birthdayPicker"
+         (dateInput)="logDateInput($event)" (dateChange)="logDateChange($event)"/>
   <mat-datepicker-toggle [for]="birthdayPicker" matSuffix></mat-datepicker-toggle>
   <mat-datepicker #birthdayPicker [startAt]="startDate"></mat-datepicker>
 </mat-form-field>
