@@ -8,6 +8,7 @@ import { StepperComponent } from './stepper/stepper.component';
 import { FormComponent } from '../form/form.component';
 import { InputComponent } from './input/input.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { SelectComponent } from './select/select.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'form', component: FormComponent },
   { path: 'input', component: InputComponent },
   { path: 'datepicker', component: DatepickerComponent },
-  { path: '', redirectTo: '/datepicker', pathMatch: 'full' }
+  { path: 'select', component: SelectComponent },
+  { path: '', redirectTo: '/select', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -13,9 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
 import { HtmlPipe } from './input/html.pipe';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
-  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent, InputComponent, HtmlPipe, DatepickerComponent],
+  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent,
+    StepperComponent, InputComponent, HtmlPipe, DatepickerComponent, SelectComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -24,4 +26,5 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     LessonRoutingModule
   ]
 })
-export class LessonModule { }
+export class LessonModule {
+}
