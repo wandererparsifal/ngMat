@@ -11,9 +11,10 @@ import { MenuComponent } from './menu/menu.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
+import { HtmlPipe } from './input/html.pipe';
 
 @NgModule({
-  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent, InputComponent],
+  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent, InputComponent, HtmlPipe],
   imports: [
     CommonModule,
     FormsModule,

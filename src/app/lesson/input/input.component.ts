@@ -67,7 +67,9 @@ export class InputComponent implements OnInit {
 
   highlightFiltered(countryName: string) {
     const inputCountry = this.countryControl.value;
-    return countryName.replace(inputCountry, `<span class="autocomplete-highlight">${inputCountry}</span>`);
+    // 此处使用 css class 无效，需要直接使用 style，原因不明
+    return countryName.replace(inputCountry,
+      `<span style="font-weight: bold;background: yellow;">${inputCountry}</span>`);
   }
 
 }
