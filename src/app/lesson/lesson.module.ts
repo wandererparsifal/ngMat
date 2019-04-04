@@ -12,9 +12,10 @@ import { StepperComponent } from './stepper/stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
 import { HtmlPipe } from './input/html.pipe';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 @NgModule({
-  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent, InputComponent, HtmlPipe],
+  declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent, StepperComponent, InputComponent, HtmlPipe, DatepickerComponent],
   imports: [
     CommonModule,
     FormsModule,
