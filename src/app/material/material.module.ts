@@ -2,18 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {
+  MAT_DATE_LOCALE,
+  MatAutocompleteModule,
   MatButtonModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
   MatIconModule,
+  MatInputModule,
   MatListModule,
-  MatSidenavModule,
-  MatToolbarModule,
   MatMenuModule,
-  MatStepperModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatDatepickerModule
+  MatSidenavModule,
+  MatStepperModule,
+  MatToolbarModule
 } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'zh-CN' }],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -44,4 +50,5 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatMomentDateModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {
+}
