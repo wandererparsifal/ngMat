@@ -11,7 +11,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatMenuModule,
+  MatMenuModule, MatSelectModule,
   MatSidenavModule,
   MatStepperModule,
   MatToolbarModule
@@ -49,7 +49,8 @@ export const CN_FORMATS = {
     MatInputModule,
     MatAutocompleteModule,
     MatDatepickerModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -63,7 +64,8 @@ export const CN_FORMATS = {
     MatInputModule,
     MatAutocompleteModule,
     MatDatepickerModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule {

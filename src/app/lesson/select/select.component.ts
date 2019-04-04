@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectComponent implements OnInit {
 
-  constructor() { }
+  nestInterestList: any[];
 
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    this.nestInterestList = [
+      { id: 0, name: 'aaa', subItems: [{ id: 0, name: 'aaa1' }, { id: 2, name: 'aaa2' }] },
+      { id: 1, name: 'bbb', subItems: [{ id: 0, name: 'bbb1' }] },
+      { id: 2, name: 'ccc', subItems: [{ id: 0, name: 'ccc1' }, { id: 2, name: 'ccc2' }] }];
+  }
 }

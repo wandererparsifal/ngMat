@@ -1,3 +1,6 @@
-<p>
-  select works!
-</p>
+<mat-select placeholder="你的休閒愛好?" multiple>
+  <mat-option [value]="undefined">無</mat-option>
+  <mat-optgroup *ngFor="let parent of nestInterestList; let index = index" [label]="parent.name" [disabled]="index===1">
+    <mat-option *ngFor="let child of parent.subItems" [value]="child.id">{{ child.name }}</mat-option>
+  </mat-optgroup>
+</mat-select>
