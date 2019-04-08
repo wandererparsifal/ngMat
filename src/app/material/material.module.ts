@@ -5,7 +5,7 @@ import {
   MAT_DATE_FORMATS,
   MAT_DATE_LOCALE,
   MatAutocompleteModule,
-  MatButtonModule,
+  MatButtonModule, MatCheckboxModule,
   MatDatepickerModule,
   MatFormFieldModule,
   MatIconModule,
@@ -50,7 +50,8 @@ export const CN_FORMATS = {
     MatAutocompleteModule,
     MatDatepickerModule,
     MatMomentDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   exports: [
     MatButtonModule,
@@ -65,7 +66,8 @@ export const CN_FORMATS = {
     MatAutocompleteModule,
     MatDatepickerModule,
     MatMomentDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule {

@@ -1,3 +1,8 @@
-<p>
-  selection works!
-</p>
+<form [formGroup]="mainQuestions">
+  <div>除了生活消費外，你最常花費在哪些項目上？</div>
+  <mat-checkbox [formControl]="mainQuestions.get('payForBook')">書籍</mat-checkbox>
+  &nbsp;
+  <mat-checkbox [formControl]="mainQuestions.get('payForMusic')">音樂</mat-checkbox>
+  &nbsp;
+  <mat-checkbox [formControl]="mainQuestions.get('payForMovie')">電影</mat-checkbox>
+</form>
