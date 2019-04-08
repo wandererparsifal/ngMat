@@ -19,7 +19,12 @@ export class SelectionComponent implements OnInit {
       payForMusic: new FormControl(false),
       payForMovie: new FormControl(true),
       payForAll: new FormControl(true),
+      evaluate: new FormControl(3)
     });
+    this.mainQuestions.get('evaluate').valueChanges
+      .subscribe(value => {
+        console.log('evaluate: ' + value);
+      });
   }
 
   ngOnInit() {
