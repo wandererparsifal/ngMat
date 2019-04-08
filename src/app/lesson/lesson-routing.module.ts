@@ -11,6 +11,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SelectComponent } from './select/select.component';
 import { SelectionComponent } from './selection/selection.component';
 import { SliderComponent } from './slider/slider.component';
+import { GridlistComponent } from './gridlist/gridlist.component';
 
 const routes: Routes = [
   {
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'select', component: SelectComponent },
   { path: 'selection', component: SelectionComponent },
   { path: 'slider', component: SliderComponent },
-  { path: '', redirectTo: '/slider', pathMatch: 'full' }
+  { path: 'gridlist', component: GridlistComponent },
+  { path: '', redirectTo: '/gridlist', pathMatch: 'full' }
 ];
 
 @NgModule({

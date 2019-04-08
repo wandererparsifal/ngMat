@@ -7,7 +7,7 @@ import {
   MatAutocompleteModule,
   MatButtonModule, MatCheckboxModule,
   MatDatepickerModule,
-  MatFormFieldModule,
+  MatFormFieldModule, MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -54,7 +54,8 @@ export const CN_FORMATS = {
     MatCheckboxModule,
     MatRadioModule,
     MatSlideToggleModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule
   ],
   exports: [
     MatButtonModule,
@@ -73,7 +74,8 @@ export const CN_FORMATS = {
     MatCheckboxModule,
     MatRadioModule,
     MatSlideToggleModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule {

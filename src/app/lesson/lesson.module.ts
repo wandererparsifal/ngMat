@@ -16,10 +16,11 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SelectComponent } from './select/select.component';
 import { SelectionComponent } from './selection/selection.component';
 import { SliderComponent } from './slider/slider.component';
+import { GridlistComponent } from './gridlist/gridlist.component';
 
 @NgModule({
   declarations: [SidenavComponent, ToolbarComponent, ListComponent, MenuComponent,
-    StepperComponent, InputComponent, HtmlPipe, DatepickerComponent, SelectComponent, SelectionComponent, SliderComponent],
+    StepperComponent, InputComponent, HtmlPipe, DatepickerComponent, SelectComponent, SelectionComponent, SliderComponent, GridlistComponent],
   imports: [
     CommonModule,
     FormsModule,
