@@ -1,3 +1,19 @@
-<p>
-  slider works!
-</p>
+<form [formGroup]="favoriteColor">
+  <div>選擇你最喜歡的顏色</div>
+  <div>
+    <mat-slider formControlName="favoriteColorRed" min="0" max="255" step="32"
+                [tickInterval]="1"></mat-slider>
+    <span>Red</span>
+  </div>
+  <div>
+    <mat-slider formControlName="favoriteColorGreen" min="0" max="255" step="1"></mat-slider>
+    <span>Green</span>
+  </div>
+  <div>
+    <mat-slider formControlName="favoriteColorBlue" min="0" max="255" step="1" thumbLabel></mat-slider>
+    <span>Blue</span>
+  </div>
+  <div>RGB: ({{ selectedColorRed }}, {{ selectedColorGreen }}, {{ selectedColorBlue }})</div>
+  <div style="width: 50px; height: 50px; border: 1px solid #000"
+       [ngStyle]="{background: selectedColorStyle()}"></div>
+</form>
