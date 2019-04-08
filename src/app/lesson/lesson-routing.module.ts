@@ -10,6 +10,7 @@ import { InputComponent } from './input/input.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SelectComponent } from './select/select.component';
 import { SelectionComponent } from './selection/selection.component';
+import { SliderComponent } from './slider/slider.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'datepicker', component: DatepickerComponent },
   { path: 'select', component: SelectComponent },
   { path: 'selection', component: SelectionComponent },
-  { path: '', redirectTo: '/selection', pathMatch: 'full' }
+  { path: 'slider', component: SliderComponent },
+  { path: '', redirectTo: '/slider', pathMatch: 'full' }
 ];
 
 @NgModule({
