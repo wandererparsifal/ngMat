@@ -12,7 +12,7 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule, MatRadioModule, MatSelectModule,
-  MatSidenavModule,
+  MatSidenavModule, MatSlideToggleModule,
   MatStepperModule,
   MatToolbarModule
 } from '@angular/material';
@@ -52,7 +52,8 @@ export const CN_FORMATS = {
     MatMomentDateModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSlideToggleModule
   ],
   exports: [
     MatButtonModule,
@@ -69,7 +70,8 @@ export const CN_FORMATS = {
     MatMomentDateModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSlideToggleModule
   ]
 })
 export class MaterialModule {
