@@ -1,4 +1,10 @@
-<mat-grid-list cols="3">
+<form [formGroup]="gridGroup">
+  <mat-slider formControlName="colsControl" min="1" max="4" step="1"
+              [tickInterval]="1"></mat-slider>
+  &nbsp;
+  <span>cols</span>
+</form>
+<mat-grid-list [cols]="cols">
   <mat-grid-tile style="background: red">
     Tile 1
   </mat-grid-tile>
