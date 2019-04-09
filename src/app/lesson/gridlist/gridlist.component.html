@@ -4,11 +4,11 @@
   &nbsp;
   <span>cols</span>
 </form>
-<mat-grid-list [cols]="cols" rowHeight="16:9">
-  <mat-grid-tile style="background: red">
+<mat-grid-list [cols]="cols" rowHeight="16:9" gutterSize="8px">
+  <mat-grid-tile style="background: red" colspan="2">
     Tile 1
   </mat-grid-tile>
-  <mat-grid-tile style="background: green">
+  <mat-grid-tile style="background: green" rowspan="2">
     Tile 2
   </mat-grid-tile>
   <mat-grid-tile style="background: blue">
